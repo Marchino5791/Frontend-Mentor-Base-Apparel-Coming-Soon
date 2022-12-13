@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://github.com/Marchino5791/Frontend-Mentor-Base-Apparel-Coming-Soon](https://github.com/Marchino5791/Frontend-Mentor-Base-Apparel-Coming-Soon)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
@@ -82,4 +82,4 @@ I want to keep on improving my JavaScript acknowledgments.
 ## Author
 
 - Frontend Mentor - [@marchino5791](https://www.frontendmentor.io/profile/marchino5791)
-- LinkedIn - [@yourusername](https://www.twitter.com/yourusername)
+- LinkedIn - [@Marco Antonio Paolino](https://www.linkedin.com/in/marco-paolino/)
