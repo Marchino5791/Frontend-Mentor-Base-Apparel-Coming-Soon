@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Screenshot Base Apparel Coming Soon](https://github.com/Marchino5791/Frontend-Mentor-Base-Apparel-Coming-Soon/blob/main/Screenshot%20BACS.png)
 
 ### Links
 
