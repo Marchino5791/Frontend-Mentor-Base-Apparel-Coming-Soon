@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-text: hsl(0, 6%, 24%);
+  --secondary-text: hsl(0, 36%, 70%);
+  --details-color: hsl(0, 93%, 68%);
+
+  --gradient-1: 135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%);
+  --gradient-2: 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%);
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: min-content 1fr;
+}
+
+/* +-----+-----+-----+ Template +-----+-----+-----+ */
+.background {
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+  background-image: url("images/bg-pattern-desktop.svg"), linear-gradient(var(--gradient-1));
+  background-size: cover;
+  background-position: left;
+}
+
+.logo-box {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.text-box {
+  grid-column: 1 / 2;
+  grid-row: 2 / -1;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.img-box {
+  grid-column: 2 / -1;
+  grid-row: 1 / -1;
+
+  display: block;
+  overflow: hidden;
+}
+
+/* +-----+-----+-----+ Logo +-----+-----+-----+ */
+.logo-box__logo {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+/* +-----+-----+-----+ Text +-----+-----+-----+ */
+.text-box__heading {
+  color: var(--primary-text);
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 1rem;
+}
+
+.text-box__heading--strong {
+  color: var(--secondary-text);
+  font-weight: 200;
+  display: block;
+}
+
+.text-box__paragraph {
+  color: var(--secondary-text);
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+}
+
+/* +-----+-----+-----+ Form +-----+-----+-----+ */
+#form {
+  position: relative;
+}
+
+#form__email {
+  width: 100%;
+  height: 3rem;
+  border-radius: 3rem;
+  padding: 1rem 6rem 1rem 1.5rem;
+  border: 1px solid var(--secondary-text);
+  background-color: linear-gradient(var(--gradient-1));
+  opacity: 0.5;
+  outline-color: var(--secondary-text);
+}
+
+.form__subscribe {
+  width: 5.5rem;
+  height: 3rem;
+  border-radius: 3rem;
+  border: none;
+  background-image: linear-gradient(var(--gradient-2));
+  position: absolute;
+  right: 0;
+}
+
+.form__subscribe:hover {
+  filter: brightness(110%);
+  box-shadow: 0 0.5rem 1rem var(--secondary-text);
+}
+
+#form__error {
+  position: absolute;
+  top: 25%;
+  transform: translateY(-50%);
+  right: 6rem;
+  visibility: hidden;
+}
+
+#form__message {
+  color: var(--details-color);
+  padding: 1rem;
+  visibility: hidden;
+}
+
+/* +-----+-----+-----+ Img +-----+-----+-----+ */
+.img-box__hero {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* +-----+-----+-----+ Footer +-----+-----+-----+ */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+/* +-----+-----+-----+ Media +-----+-----+-----+ */
+@media (max-width: 1150px) {
+
+  html {
+    font-size: 93.75%;
+  }
+
+  body {
+    grid-template-columns: 55% 45%;
+  }
+
+  /* +-----+-----+-----+ Template +-----+-----+-----+ */
+  .logo-box,
+  .text-box {
+    width: 70%;
+  }
+
+  /* +-----+-----+-----+ Text +-----+-----+-----+ */
+  .text-box__heading {
+    font-size: 3.5rem;
+    letter-spacing: 0.75rem;
+  }
+}
+
+
+@media (max-width: 750px) {
+
+  html {
+    font-size: 87.5%;
+  }
+
+  body {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+  }
+
+  /* +-----+-----+-----+ Template +-----+-----+-----+ */
+  .background {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    background-image: linear-gradient(var(--gradient-1));
+  }
+
+  .logo-box {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    width: 80%;
+
+    margin: 2rem auto;
+  }
+
+  .text-box {
+    grid-column: 1 / -1;
+    grid-row: 3 / -1;
+    width: 80%;
+    margin: 4rem auto;
+    text-align: center;
+  }
+
+  .img-box {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+
+  /* +-----+-----+-----+ Logo +-----+-----+-----+ */
+  .logo-box__logo {
+    margin: 0;
+    width: 40%;
+  }
+
+  /* +-----+-----+-----+ Text +-----+-----+-----+ */
+  .text-box__heading {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.5rem;
+  }
+
+  .text-box__paragraph {
+    margin-bottom: 2rem;
+  }
+}
